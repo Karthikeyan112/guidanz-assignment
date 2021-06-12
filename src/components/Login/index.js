@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Card, Col, Input, Row, Space, Typography } from 'antd';
 import { useHistory } from "react-router-dom";
 
@@ -20,6 +20,10 @@ const LoginComponent = () => {
   const [password, setPassword] = useState('');
   const { Title } = Typography;
   const history = useHistory();
+
+  useEffect(() => {
+    sessionStorage.removeItem('user');
+  }, [])
 
   const handleLogin = () => {
     const authArr = Object.values(authData);
