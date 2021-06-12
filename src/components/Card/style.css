@@ -1,0 +1,11 @@
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ant-card .ant-card-body {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
